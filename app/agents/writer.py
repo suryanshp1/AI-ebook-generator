@@ -4,6 +4,7 @@ from app.exception.exception import CustomException
 from app.logger.logger import logging
 from langchain_groq import ChatGroq
 from app.config import Settings
+import traceback
 import sys
 
     
@@ -46,5 +47,5 @@ class WriterAgent:
             return chapter_content
 
         except Exception as e:
-            logging.exception(e)
+            logging.exception(F"Error: {e} | Traceback: {traceback.format_exc()}")
             raise CustomException(e,sys)
