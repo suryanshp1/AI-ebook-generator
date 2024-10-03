@@ -8,6 +8,7 @@ from app.agents.editor import EditorAgent
 from app.config import Settings
 import traceback
 import sys
+import gc
 
 settings = Settings()
 
@@ -44,6 +45,10 @@ def generate_ebook_task(topic):
 
         # Return PDF file path
         logging.info("Task completed.")
+
+        collected = gc.collect()
+
+        logging.info(f"Garbage collector: collected {collected} objects.")
         return pdf_file_path
 
     except Exception as e:

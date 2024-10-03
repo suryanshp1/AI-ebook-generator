@@ -21,4 +21,4 @@ ENV PATH="/opt/venv/bin:$PATH"
 COPY . /app/
 
 # Run the gunicorn server
-CMD ["gunicorn", "app.main:app", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "-b", "0.0.0.0:8000"]
+CMD ["/bin/bash", "/app/script/entrypoint.sh"]
