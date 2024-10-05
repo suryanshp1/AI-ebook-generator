@@ -18,7 +18,7 @@ Ensure you have the following installed:
 
 Docker: To run the application in a containerized environment.
 
-Environment Variables
+#### Environment Variables
 
 The following environment variables need to be configured in your .env file:
 
