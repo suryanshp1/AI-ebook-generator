@@ -79,3 +79,6 @@ FPDF: Library to generate the final eBook in PDF format.
 Elasticsearch: Used for logging.
 
 Langchain: To create and execute agents
+
+
+You can checkout sample_pdf/ folder to get a sample ebook.
